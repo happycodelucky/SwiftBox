@@ -5,13 +5,13 @@ import PackageDescription
 let package = Package(
     name: "SwiftBox",
     platforms: [
-        .iOS(.v12), .macOS(.v10_13),
+        .iOS(.v12), .macOS(.v10_13), .tvOS(.v12), .watchOS(.v5)
     ],
 
     products: [
         .library(name: "SwiftBox", targets: ["SwiftBox"]),
     ],
-    
+
     dependencies: [
         // None
     ],
@@ -21,7 +21,6 @@ let package = Package(
             name: "SwiftBox",
             dependencies: [],
             path: "Sources"
-        ),
-        // .testTarget(name: "SwiftBoxTests", dependencies: ["SwiftBox"]),
+        )
     ]
 )
